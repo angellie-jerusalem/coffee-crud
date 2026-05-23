@@ -11,19 +11,21 @@ A PHP REST API with a connected frontend for managing a coffee shop menu.
 ```
 coffee-crud/
 ├── api/
-│   ├── config/
-│   │   └── db.php          # Database connection
-│   ├── models/
-│   │   └── MenuItem.php    # Menu item model
-│   └── menu/
-│       ├── read.php        # GET   - Fetch all items
-│       ├── create.php      # POST  - Add new item
-│       ├── update.php      # PUT   - Update item
-│       └── delete.php      # DELETE - Remove item
+│ ├── config/
+│ │ └── db.php               # Database connection
+│ ├── models/
+│ │ └── MenuItem.php         # Menu item model
+│ └── menu/
+│ ├── read.php               # GET - Fetch all items
+│ ├── create.php             # POST - Add new item
+│ ├── update.php             # PUT - Update item
+│ └── delete.php             # DELETE - Remove item
 ├── frontend/
-│   └── index.html          # Frontend UI
-├── database.sql            # DB setup script
+│ ├── index.html             # Main UI page
+│ ├── style.css              # Styling and layout
+│ └── app.js                 # Frontend logic & API calls
 └── README.md
+
 ```
 
 ## Setup Instructions
