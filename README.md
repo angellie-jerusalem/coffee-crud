@@ -1,5 +1,11 @@
 # BrewBase — Coffee Shop Menu CRUD API
 
+## Preview Link
+
+```bash
+http://localhost/coffee-crud/frontend/index.html
+```
+
 A PHP REST API with a connected frontend for managing a coffee shop menu.
 
 ## Tech Stack
@@ -62,9 +68,3 @@ CREATE TABLE menu_items (
 * Available / Unavailable Toggle
 * Responsive UI Design
 * Toast Notifications
-
-## Preview Link
-
-```bash
-http://localhost/coffee-crud/frontend/index.html
-```
