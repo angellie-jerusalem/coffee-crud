@@ -26,7 +26,6 @@ coffee-crud/
 │   ├── index.html
 │   ├── style.css
 │   └── app.js
-├── database.sql
 └── README.md
 ```
 
