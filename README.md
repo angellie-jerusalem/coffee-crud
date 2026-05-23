@@ -32,10 +32,10 @@ coffee-crud/
 ## Database Schema
 
 ```sql
-CREATE DATABASE IF NOT EXISTS coffee_shop;
+CREATE DATABASE coffee_shop;
 USE coffee_shop;
 
-CREATE TABLE IF NOT EXISTS menu_items (
+CREATE TABLE menu_items (
     id          INT AUTO_INCREMENT PRIMARY KEY,
     name        VARCHAR(100)    NOT NULL,
     category    VARCHAR(50)     NOT NULL,
