@@ -1,6 +1,10 @@
 # BrewBase — Coffee Shop Menu CRUD API
 
- **Preview URL:** `http://localhost/coffee-crud/frontend/index.html`
+## Preview Link
+
+```bash
+http://localhost/coffee-crud/frontend/index.html
+```
 
 A PHP REST API with a connected frontend for managing a coffee shop menu.
 
