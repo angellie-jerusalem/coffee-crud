@@ -3,61 +3,69 @@
 A PHP REST API with a connected frontend for managing a coffee shop menu.
 
 ## Tech Stack
-- **Backend:** PHP (vanilla), PDO
-- **Database:** MySQL (via XAMPP)
-- **Frontend:** HTML, CSS, JavaScript
+
+* **Backend:** PHP (Vanilla PHP), PDO
+* **Database:** MySQL (XAMPP)
+* **Frontend:** HTML, CSS, JavaScript
 
 ## Project Structure
-```
+
+```bash
 coffee-crud/
 ├── api/
-│ ├── config/
-│ │ └── db.php               # Database connection
-│ ├── models/
-│ │ └── MenuItem.php         # Menu item model
-│ └── menu/
-│ ├── read.php               # GET - Fetch all items
-│ ├── create.php             # POST - Add new item
-│ ├── update.php             # PUT - Update item
-│ └── delete.php             # DELETE - Remove item
+│   ├── config/
+│   │   └── db.php
+│   ├── models/
+│   │   └── MenuItem.php
+│   └── menu/
+│       ├── read.php
+│       ├── create.php
+│       ├── update.php
+│       └── delete.php
 ├── frontend/
-│ ├── index.html             # Main UI page
-│ ├── style.css              # Styling and layout
-│ └── app.js                 # Frontend logic & API calls
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+├── database.sql
 └── README.md
-
 ```
 
-## Setup Instructions
+## Database Schema
 
-### 1. Requirements
-- XAMPP (Apache + MySQL)
+```sql
+CREATE DATABASE IF NOT EXISTS coffee_shop;
+USE coffee_shop;
 
-### 2. Database Setup
-1. Open **phpMyAdmin** → go to **SQL** tab
-2. Copy and run the contents of `database.sql`
-3. This creates the `coffee_shop` database with sample data
-
-### 3. Run the Project
-1. Copy the entire `coffee-crud` folder to:
-   ```
-   C:\xampp\htdocs\coffee-crud
-   ```
-2. Start **Apache** and **MySQL** in XAMPP Control Panel
-3. Open browser → `http://localhost/coffee-crud/frontend/index.html`
+CREATE TABLE IF NOT EXISTS menu_items (
+    id          INT AUTO_INCREMENT PRIMARY KEY,
+    name        VARCHAR(100)    NOT NULL,
+    category    VARCHAR(50)     NOT NULL,
+    price       DECIMAL(10, 2)  NOT NULL,
+    description TEXT,
+    available   TINYINT(1)      DEFAULT 1,
+    created_at  TIMESTAMP       DEFAULT CURRENT_TIMESTAMP
+);
+```
 
 ## API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/menu/read.php` | Get all menu items |
-| POST | `/api/menu/create.php` | Add a new menu item |
-| PUT | `/api/menu/update.php` | Update existing item |
-| DELETE | `/api/menu/delete.php` | Delete a menu item |
+| Method | Endpoint               | Description          |
+| ------ | ---------------------- | -------------------- |
+| GET    | `/api/menu/read.php`   | Fetch all menu items |
+| POST   | `/api/menu/create.php` | Add a new menu item  |
+| PUT    | `/api/menu/update.php` | Update a menu item   |
+| DELETE | `/api/menu/delete.php` | Delete a menu item   |
 
 ## Features
-- Full CRUD operations
-- Category filter tabs
-- Available/Unavailable toggle
-- Responsive design
-- Toast notifications
+
+* Full CRUD Operations
+* Category Filter Tabs
+* Available / Unavailable Toggle
+* Responsive UI Design
+* Toast Notifications
+
+## Preview Link
+
+```bash
+http://localhost/coffee-crud/frontend/index.html
+```
