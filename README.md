@@ -53,38 +53,6 @@ coffee-crud/
 | PUT | `/api/menu/update.php` | Update existing item |
 | DELETE | `/api/menu/delete.php` | Delete a menu item |
 
-## Request/Response Format
-
-### POST /api/menu/create.php
-```json
-{
-  "name": "Caramel Latte",
-  "category": "Coffee",
-  "price": 110.00,
-  "description": "Sweet and creamy caramel latte",
-  "available": 1
-}
-```
-
-### PUT /api/menu/update.php
-```json
-{
-  "id": 1,
-  "name": "Caramel Latte",
-  "category": "Coffee",
-  "price": 120.00,
-  "description": "Updated description",
-  "available": 1
-}
-```
-
-### DELETE /api/menu/delete.php
-```json
-{
-  "id": 1
-}
-```
-
 ## Features
 - Full CRUD operations
 - Category filter tabs
