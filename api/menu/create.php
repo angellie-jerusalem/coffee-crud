@@ -11,7 +11,7 @@ $data = json_decode(file_get_contents("php://input"));
 if (
     !empty($data->name) &&
     !empty($data->category) &&
-    isset($data->price)
+    isset($data->price) && $data->price >= 0
 ) {
     $item->name        = $data->name;
     $item->category    = $data->category;

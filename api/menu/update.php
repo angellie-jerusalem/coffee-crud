@@ -9,10 +9,10 @@ $item = new MenuItem($db);
 $data = json_decode(file_get_contents("php://input"));
 
 if (
-    !empty($data->id) &&
+    isset($data->id) && $data->id !== '' &&
     !empty($data->name) &&
     !empty($data->category) &&
-    isset($data->price)
+    isset($data->price) && $data->price >= 0
 ) {
     $item->id          = $data->id;
     $item->name        = $data->name;
