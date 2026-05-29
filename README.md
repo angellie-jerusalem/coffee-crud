@@ -29,9 +29,7 @@ coffee-crud/
 │       ├── update.php
 │       └── delete.php
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
+│   └── index.html
 └── README.md
 ```
 
